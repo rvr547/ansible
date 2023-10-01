@@ -1,0 +1,8 @@
+#playbook containd multiple palays 
+name: ping the node
+hosts: mongodb
+#list of tasks
+tasks: 
+- name: piniging the server
+#this is map
+  ansible.builtin.ping:
