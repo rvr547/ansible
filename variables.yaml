@@ -1,0 +1,6 @@
+- name: variables in ansible
+  hosts: mongodb
+  tasks:
+  - name: print hellow world
+    ansible.builtin.debug:
+      msg: "Hello world! with ansible"
