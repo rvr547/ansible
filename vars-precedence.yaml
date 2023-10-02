@@ -4,10 +4,10 @@
     NAME: Vandana-play
 #  vars_files:
 #  - vars.yaml
-  vars_prompt:
-  - name: NAME
-    prompt: please enter NAME
-    private: false
+#  vars_prompt:
+#  - name: NAME
+#   prompt: please enter NAME
+#    private: false
   tasks:
   - name: variable at task level
  #   vars:
@@ -18,3 +18,5 @@
 #1.first prefence command line
 #2.second prefernce task level
 #3. third prefrence var files
+#4. promt
+#5. 
