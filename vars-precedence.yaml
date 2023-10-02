@@ -1,7 +1,7 @@
 - name: testing variables precedence
   hosts: mongodb
-  vars:
-    NAME: Vandana-play
+  # vars:
+  #   NAME: Vandana-play
 #  vars_files:
 #  - vars.yaml
 #  vars_prompt:
@@ -19,4 +19,6 @@
 #2.second prefernce task level
 #3. third prefrence var files
 #4. promt
-#5. 
+#5. play
+#6. Inventoy
+#7. Roles
