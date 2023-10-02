@@ -1,0 +1,11 @@
+- name: testing variables precedence
+  hosts: localhost
+  vars:
+    NAME: Vandana-play
+  tasks:
+  - name: variable at task level
+    vars:
+      NAME: Vandana-task
+    ansible.builtin.debug:
+      msg: "Hello I am {{NAME}}" 
+  
