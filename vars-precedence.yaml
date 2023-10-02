@@ -10,8 +10,11 @@
     private: false
   tasks:
   - name: variable at task level
-    vars:
-      NAME: Vandana-task
+ #   vars:
+ #     NAME: Vandana-task
     ansible.builtin.debug:
       msg: "Hello I am {{NAME}}" 
   
+#1.first prefence command line
+#2.second prefernce task level
+#3. third prefrence 
