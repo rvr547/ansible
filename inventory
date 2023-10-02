@@ -8,6 +8,7 @@ roboshop-us-dev-db-mongodb-02.preprv.online
 [mongodb:vars]
 MONGO_USERNAME=adminmongo
 MONGO_PASSWORD=admin123
+NAME=Vandana-inventory
 
 [mysql]
 roboshop-us-dev-db-mysql-01.preprv.online
