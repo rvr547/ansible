@@ -5,6 +5,9 @@
 [mongodb]
 roboshop-us-dev-db-mongodb-01.preprv.online
 
+[mongodb:vars]
+MONGO_USERNAME=adminmongo
+MONGO_PASSWORD=admin123
 
 [mysql]
 roboshop-us-dev-db-mysql-01.preprv.online
