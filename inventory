@@ -3,7 +3,7 @@
 
 
 [mongodb]
-roboshop-us-dev-db-mongodb-01.preprv.online
+roboshop-us-dev-db-mongodb-02.preprv.online
 
 [mongodb:vars]
 MONGO_USERNAME=adminmongo
