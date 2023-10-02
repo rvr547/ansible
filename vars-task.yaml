@@ -9,7 +9,7 @@
       msg: "Money : {{money}} and LAND: {{land}}"
   - name:  inherit values from play and add and override
     vars:
-    - name: "1000 RS"
+    - money: "1000 RS"
       land: "1 acer"
     ansible.builtin.debug: 
        msg: "Money : {{money}} and LAND: {{land}}"
