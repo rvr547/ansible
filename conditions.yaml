@@ -3,9 +3,10 @@
   tasks:
   - name: check roboshop user exist or not
   #to write linux commands directly
-  #
+
     ansible.builtin.command: id roboshop
     register: output
+    ignore_errors: true
   - name: Print command output
     ansible.builtin.debug:
       msg: "output is {{output}}"
