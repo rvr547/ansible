@@ -6,17 +6,17 @@
     private: false
   tasks:
   - name: create user
-    ansible.builtin.command: id USERNAME
+    ansible.builtin.command: id {{USERNAME}}
     register: output
     ignore_errors: true
   - name: Print command output
     ansible.builtin.debug:
       msg: "output is {{output}}"
-  # - name: print exit status
-  #   ansible.builtin.debug:
-  #     msg: "Exit staus is {{output.rc}}"
-  # - name: create user USERNAME
-  #   become: yes
-  #   ansible.builtin.user:
-  #     name: USERNAME
-  #   when: output.rc != 0
+  - name: print exit status
+    ansible.builtin.debug:
+      msg: "Exit staus is {{output.rc}}"
+  - name: create user USERNAME
+    become: yes
+    ansible.builtin.user:
+      name: USERNAME
+    when: output.rc != 0
