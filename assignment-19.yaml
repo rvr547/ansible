@@ -4,13 +4,13 @@
   - name: USERNAME
     prompt: Please enter your username
     private: false
-  # tasks:
-  # ansible.builtin.command: id USERNAME
-  #   register: output
-  #   ignore_errors: true
-  # - name: Print command output
-  #   ansible.builtin.debug:
-  #     msg: "output is {{output}}"
+  tasks:
+  ansible.builtin.command: id name
+    register: output
+    ignore_errors: true
+  - name: Print command output
+    ansible.builtin.debug:
+      msg: "output is {{output}}"
   # - name: print exit status
   #   ansible.builtin.debug:
   #     msg: "Exit staus is {{output.rc}}"
