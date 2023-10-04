@@ -7,11 +7,11 @@
   tasks:
   - name: create user
     ansible.builtin.command: id USERNAME
-      register: output
-      ignore_errors: true
-    - name: Print command output
-      ansible.builtin.debug:
-        msg: "output is {{output}}"
+    register: output
+    ignore_errors: true
+  - name: Print command output
+    ansible.builtin.debug:
+      msg: "output is {{output}}"
   # - name: print exit status
   #   ansible.builtin.debug:
   #     msg: "Exit staus is {{output.rc}}"
