@@ -20,3 +20,14 @@
     ansible.builtin.user:
       name: "{{USERNAME}}"
     when: output.rc != 0
+  - name: cross check the status
+    ansible.builtin.command: id {{USERNAME}}
+    register: output
+    ignore_errors: true
+  # - name: Print command output
+  #   ansible.builtin.debug:
+  #     msg: "output is {{output}}"
+  - name: print status
+    ansible.builtin.debug:
+      msg: "User created successfully"
+    when: output.rc == 0
