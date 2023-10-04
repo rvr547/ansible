@@ -5,7 +5,7 @@
     prompt: Please enter your username
     private: false
   tasks:
-  ansible.builtin.command: id name
+  ansible.builtin.command: id USERNAME
     register: output
     ignore_errors: true
   - name: Print command output
