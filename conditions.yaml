@@ -1,5 +1,6 @@
 - name: create user using conditions
   hosts: localhost
+
   tasks:
   - name: check roboshop user exist or not
   #to write linux commands directly
@@ -13,6 +14,7 @@
     ansible.builtin.debug:
       msg: "Exit staus is {{output.rc}}"
   - name: create user roboshop
+    become: yes
     ansible.builtin.user:
       name: roboshop
     when: output.rc != 0
