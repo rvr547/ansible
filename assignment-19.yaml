@@ -5,7 +5,7 @@
     prompt: Please enter your username
     private: false
   tasks:
-  ansible.builtin.command: id {{USERNAME}}
+  ansible.builtin.command: id USERNAME
     register: output
     ignore_errors: true
   - name: Print command output
@@ -17,5 +17,5 @@
   - name: create user USERNAME
     become: yes
     ansible.builtin.user:
-      name: {{USERNAME}}
+      name: USERNAME
     when: output.rc != 0
