@@ -3,7 +3,6 @@
   tasks:
   - name: check roboshop user exist or not
   #to write linux commands directly
-
     ansible.builtin.command: id roboshop
     register: output
     ignore_errors: true
@@ -13,3 +12,7 @@
   - name: print exit status
     ansible.builtin.debug:
       msg: "Exit staus is {{output.rc}}"
+  - name: create user roboshop
+    ansible.builtin.user:
+      name: roboshop
+    when: output.rc != 0
