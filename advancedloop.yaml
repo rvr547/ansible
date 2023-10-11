@@ -6,6 +6,6 @@
       name: "{{item.name}}"
       state: "{{item.state}}"
     loop:
-    - {name: 'nginx' , state: 'remove'}
+    - {name: 'nginx' , state: 'absent'}
     - {name: 'mailx' , state: 'installed'}
-    - {name: 'postfix' , state: 'remove'}
+    - {name: 'postfix' , state: 'absent'}
