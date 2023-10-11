@@ -4,7 +4,7 @@
   - name: print the names
     ansible.builtin.debug:
       msg: "Hello"
-    loop:
-    - Abc
-    - efg
-    - xyz  
+      loop:
+      - Abc
+      - efg
+      - xyz  
