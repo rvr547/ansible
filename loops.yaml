@@ -3,8 +3,9 @@
   tasks:
   - name: print the names
     ansible.builtin.debug:
+     msg: "Hello"
     loop:
     - Abc
     - efg
     - xyz
-     msg: "Hello {{item}} "
+     
