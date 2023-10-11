@@ -1,0 +1,11 @@
+- name: Advanced loop
+  hosts: localhost
+  tasks:
+  - name: Install packages
+    ansible.builtin.yum:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - {name: nginx, state: remove}
+    - {name: mailx, state: installed}
+    - {name: postfix, state: remove}
